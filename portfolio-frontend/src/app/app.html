@@ -1,4 +1,7 @@
 <div class="page">
+  <div class="aura aura-1" aria-hidden="true"></div>
+  <div class="aura aura-2" aria-hidden="true"></div>
+
   <header class="topbar">
     <a class="brand" href="#about">Shanuka Upendra</a>
     <nav class="nav-links">
@@ -61,6 +64,7 @@
 
     <section class="section" id="skills">
       <h3>Technical Skills</h3>
+      <p class="section-subtitle">Core technologies I use to design, build, and ship products.</p>
       <div class="chips">
         @for (skill of skills; track skill) {
           <span class="chip">{{ skill }}</span>
@@ -70,6 +74,7 @@
 
     <section class="section" id="highlights">
       <h3>Professional Highlights</h3>
+      <p class="section-subtitle">How I work, collaborate, and keep improving in real project environments.</p>
       <ul class="highlight-list">
         @for (item of highlights; track item) {
           <li>{{ item }}</li>
@@ -79,6 +84,7 @@
 
     <section class="section" id="experience">
       <h3>Professional Experience</h3>
+      <p class="section-subtitle">Hands-on operational and technical experience in production systems.</p>
       <article class="experience-card">
         <h4>{{ experience.title }}</h4>
         <p class="sub">{{ experience.organization }}</p>
@@ -89,12 +95,18 @@
 
     <section class="section" id="projects">
       <h3>Software Development Projects</h3>
+      <p class="section-subtitle">Selected builds that show full-stack delivery and practical engineering decisions.</p>
       <div class="project-grid">
         @for (project of projects; track project.title) {
           <article class="card">
             <h4>{{ project.title }}</h4>
+            <div class="project-tags">
+              @for (tag of project.tags; track tag) {
+                <span class="tag-pill">{{ tag }}</span>
+              }
+            </div>
             <p>{{ project.description }}</p>
-            <small>{{ project.stack }}</small>
+            <small><strong>Tech Stack:</strong> {{ project.stack }}</small>
           </article>
         }
       </div>
@@ -102,6 +114,7 @@
 
     <section class="section" id="timeline">
       <h3>Career Timeline</h3>
+      <p class="section-subtitle">My progression toward becoming a strong product-focused software engineer.</p>
       <div class="timeline">
         @for (item of timeline; track item.year + item.title) {
           <article class="timeline-item">
@@ -115,6 +128,7 @@
 
     <section class="section" id="education">
       <h3>Education</h3>
+      <p class="section-subtitle">Academic path and continuous learning foundations.</p>
       <div class="education-grid">
         @for (item of education; track item.title) {
           <article class="education-card">
@@ -122,6 +136,15 @@
             <p>{{ item.institute }}</p>
           </article>
         }
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <h3>Ready to build something impactful together?</h3>
+      <p>I am open to intern and junior software engineering opportunities.</p>
+      <div class="cta-group">
+        <a [href]="'mailto:' + profile.email" class="btn primary">Hire Me</a>
+        <a [href]="profile.linkedin" target="_blank" rel="noopener" class="btn ghost">View LinkedIn</a>
       </div>
     </section>
   </main>

@@ -14,7 +14,7 @@ export class App {
     linkedin: 'https://linkedin.com/in/shanukaupendraofficial/',
     github: 'https://github.com/shanuka-upendra',
     summary:
-      'Dedicated Software Engineering professional with a strong foundation in full-stack development, focused on building scalable applications using Java, Spring Boot, and Angular.'
+      'Intern Software Engineer with hands-on full-stack project experience in Java, Spring Boot, and Angular. I focus on clean architecture, practical problem-solving, and building scalable web applications.'
   };
 
   protected readonly skills = [
@@ -46,33 +46,37 @@ export class App {
     {
       title: 'SecureLaw — Legal AI Gateway and Data Filtering System',
       description:
-        'Developed a secure legal-domain AI gateway with data filtering and token-based authentication.',
-      stack: 'Java, Spring Boot, Angular, PostgreSQL, JWT, Groq LLM, Google Gemini'
+        'Built a secure legal-domain AI gateway with request filtering, token-based authentication, and controlled model access.',
+      stack: 'Java, Spring Boot, Angular, PostgreSQL, JWT, Groq LLM, Google Gemini',
+      tags: ['Collaborative', 'Full-Stack', 'AI Integration']
     },
     {
       title: 'EVORA — Event Management Platform (Group Project)',
       description:
-        'Built core event management features in a collaborative team environment using layered backend architecture.',
-      stack: 'Java, Spring Boot, RESTful APIs, Layered Architecture, Singleton Pattern'
+        'Contributed to a team-based event platform by implementing core modules with a layered backend design and REST APIs.',
+      stack: 'Java, Spring Boot, RESTful APIs, Layered Architecture, Singleton Pattern',
+      tags: ['Team Project', 'Backend-Focused', 'Web Platform']
     },
     {
       title: 'HeloCare Pharmacy Inventory Management System',
       description:
-        'Created a desktop inventory solution with stock handling and reporting for pharmacy workflows.',
-      stack: 'Java, JavaFX, MySQL, JDBC, Scene Builder'
+        'Developed a desktop inventory system for pharmacy operations including stock tracking, item handling, and reporting flows.',
+      stack: 'Java, JavaFX, MySQL, JDBC, Scene Builder',
+      tags: ['Solo Project', 'Desktop App', 'Inventory System']
     },
     {
       title: 'Thogakade POS Management System',
       description:
-        'Implemented a full-stack POS application with layered architecture and API-driven Angular frontend.',
-      stack: 'Java, Spring Boot, Angular, TypeScript, RESTful APIs, MySQL'
+        'Delivered a full-stack POS system using layered architecture, REST services, and an Angular-based frontend experience.',
+      stack: 'Java, Spring Boot, Angular, TypeScript, RESTful APIs, MySQL',
+      tags: ['Full-Stack', 'POS System', 'Web App']
     }
   ];
 
   protected readonly highlights = [
-    'Learning by doing mindset with continuous practical project work',
-    'Fluent collaboration in agile and team-based environments',
-    'Spoken languages: Sinhala (Native), English (Fluent)'
+    'Strong "learn by doing" mindset with consistent project execution',
+    'Comfortable in agile teamwork, peer collaboration, and iterative delivery',
+    'Languages: Sinhala (Native), English (Fluent)'
   ];
 
   protected readonly experience = {
@@ -80,7 +84,7 @@ export class App {
     organization: 'BEICT Administration Branch, Horana, Sri Lanka',
     period: 'Aug 2023 – Mar 2025',
     summary:
-      'Managed scalable LMS infrastructure and secure role-based access, supporting uninterrupted service for over 2,500 global users.'
+      'Managed LMS operations and role-based access control, helping maintain stable service for more than 2,500 global users.'
   };
 
   protected readonly education = [
