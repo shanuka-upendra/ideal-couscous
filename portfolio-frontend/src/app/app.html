@@ -1,0 +1,50 @@
+<div class="page">
+  <header class="topbar">
+    <a class="brand" href="#">Portfolio</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <p class="tag">AVAILABLE FOR FREELANCE</p>
+      <h1>Hi, I am {{ profile.name }}</h1>
+      <h2>{{ profile.role }}</h2>
+      <p class="summary">{{ profile.summary }}</p>
+      <div class="cta-group">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="#contact" class="btn ghost">Contact Me</a>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h3>Skills</h3>
+      <div class="chips">
+        @for (skill of skills; track skill) {
+          <span class="chip">{{ skill }}</span>
+        }
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h3>Featured Projects</h3>
+      <div class="project-grid">
+        @for (project of projects; track project.title) {
+          <article class="card">
+            <h4>{{ project.title }}</h4>
+            <p>{{ project.description }}</p>
+            <small>{{ project.stack }}</small>
+          </article>
+        }
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>contact@yourmail.com</p>
+  </footer>
+</div>
