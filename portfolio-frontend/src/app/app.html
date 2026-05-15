@@ -1,28 +1,38 @@
 <div class="page">
+  <div class="scanlines"></div>
+
   <header class="topbar">
-    <a class="brand" href="#">Portfolio</a>
+    <a class="brand" href="#">RETRO_PORTFOLIO.EXE</a>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#timeline">Timeline</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="about">
-      <p class="tag">AVAILABLE FOR FREELANCE</p>
-      <h1>Hi, I am {{ profile.name }}</h1>
-      <h2>{{ profile.role }}</h2>
+      <p class="tag">STATUS: AVAILABLE_FOR_WORK</p>
+      <h1>> HELLO, I AM {{ profile.name }}</h1>
+      <h2>{{ profile.role.toUpperCase() }}</h2>
       <p class="summary">{{ profile.summary }}</p>
       <div class="cta-group">
-        <a href="#projects" class="btn primary">View Projects</a>
-        <a href="#contact" class="btn ghost">Contact Me</a>
+        <a href="#projects" class="btn primary">OPEN PROJECTS</a>
+        <a href="#contact" class="btn ghost">SEND MESSAGE</a>
+      </div>
+
+      <div class="terminal-box">
+        <p><span>C:\portfolio></span> whoami</p>
+        <p>{{ profile.name }} - {{ profile.role }}</p>
+        <p><span>C:\portfolio></span> skills --top</p>
+        <p>Angular, TypeScript, RxJS</p>
       </div>
     </section>
 
     <section class="section" id="skills">
-      <h3>Skills</h3>
+      <h3>CORE SKILLS</h3>
       <div class="chips">
         @for (skill of skills; track skill) {
           <span class="chip">{{ skill }}</span>
@@ -30,8 +40,17 @@
       </div>
     </section>
 
+    <section class="section" id="highlights">
+      <h3>HIGHLIGHTS</h3>
+      <ul class="highlight-list">
+        @for (item of highlights; track item) {
+          <li>{{ item }}</li>
+        }
+      </ul>
+    </section>
+
     <section class="section" id="projects">
-      <h3>Featured Projects</h3>
+      <h3>FEATURED PROJECTS</h3>
       <div class="project-grid">
         @for (project of projects; track project.title) {
           <article class="card">
@@ -42,9 +61,22 @@
         }
       </div>
     </section>
+
+    <section class="section" id="timeline">
+      <h3>TIMELINE</h3>
+      <div class="timeline">
+        @for (item of timeline; track item.year + item.title) {
+          <article class="timeline-item">
+            <p class="year">{{ item.year }}</p>
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.text }}</p>
+          </article>
+        }
+      </div>
+    </section>
   </main>
 
   <footer id="contact">
-    <p>contact@yourmail.com</p>
+    <p>EMAIL: contact@yourmail.com</p>
   </footer>
 </div>

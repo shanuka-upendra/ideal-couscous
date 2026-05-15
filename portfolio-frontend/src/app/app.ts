@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class App {
   protected readonly profile = {
     name: 'Your Name',
-    role: 'Angular Front-End Developer',
+    role: 'Front-End Developer',
     summary:
-      'I build responsive, accessible, and scalable web interfaces with Angular and modern CSS.'
+      'I build fast, accessible, and expressive web interfaces with Angular and TypeScript.'
   };
 
   protected readonly skills = [
@@ -32,6 +32,25 @@ export class App {
       title: 'Project Two',
       description: 'Another project highlight with impact and key feature details.',
       stack: 'Angular, RxJS'
+    }
+  ];
+
+  protected readonly highlights = [
+    '4+ years building front-end products',
+    'Focused on performance and accessibility',
+    'Strong component-driven UI architecture'
+  ];
+
+  protected readonly timeline = [
+    {
+      year: '2026',
+      title: 'Portfolio v1 launched',
+      text: 'Built a retro-themed personal site with Angular.'
+    },
+    {
+      year: '2025',
+      title: 'Enterprise dashboard work',
+      text: 'Shipped complex analytics UI with reusable components.'
     }
   ];
 }
