@@ -1,7 +1,7 @@
 <div class="page">
   <header class="topbar">
-    <a class="brand" href="#">Shanuka Upendra</a>
-    <nav>
+    <a class="brand" href="#about">Shanuka Upendra</a>
+    <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
@@ -13,27 +13,49 @@
 
   <main>
     <section class="hero" id="about">
-      <p class="tag">Intern Software Engineer Portfolio</p>
-      <h1>{{ profile.name }}</h1>
-      <h2>{{ profile.role }}</h2>
-      <p class="summary">{{ profile.summary }}</p>
+      <div class="hero-grid">
+        <div>
+          <p class="tag">Intern Software Engineer Portfolio</p>
+          <h1>{{ profile.name }}</h1>
+          <h2>{{ profile.role }}</h2>
+          <p class="summary">{{ profile.summary }}</p>
 
-      <p class="contact-line">
-        <strong>Mobile:</strong> {{ profile.mobile }} |
-        <strong>Email:</strong>
-        <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
-      </p>
-      <p class="contact-line">
-        <strong>LinkedIn:</strong>
-        <a [href]="profile.linkedin" target="_blank" rel="noopener">shanukaupendraofficial</a>
-        |
-        <strong>GitHub:</strong>
-        <a [href]="profile.github" target="_blank" rel="noopener">shanuka-upendra</a>
-      </p>
+          <div class="cta-group">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn ghost">Contact Me</a>
+          </div>
+        </div>
 
-      <div class="cta-group">
-        <a href="#projects" class="btn primary">View Projects</a>
-        <a href="#contact" class="btn ghost">Contact Me</a>
+        <aside class="quick-card">
+          <p><strong>Mobile</strong> {{ profile.mobile }}</p>
+          <p>
+            <strong>Email</strong>
+            <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+          </p>
+          <p>
+            <strong>LinkedIn</strong>
+            <a [href]="profile.linkedin" target="_blank" rel="noopener">Profile</a>
+          </p>
+          <p>
+            <strong>GitHub</strong>
+            <a [href]="profile.github" target="_blank" rel="noopener">shanuka-upendra</a>
+          </p>
+        </aside>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <h4>4+</h4>
+          <p>Major software projects delivered</p>
+        </article>
+        <article class="stat-card">
+          <h4>2500+</h4>
+          <p>Global LMS users supported</p>
+        </article>
+        <article class="stat-card">
+          <h4>Full-Stack</h4>
+          <p>Java, Spring Boot, Angular specialization</p>
+        </article>
       </div>
     </section>
 
@@ -105,6 +127,7 @@
   </main>
 
   <footer id="contact">
+    <p>Let’s build something great together.</p>
     <p>{{ profile.email }} | {{ profile.mobile }}</p>
   </footer>
 </div>
